@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+<title>Joes Hotdogs 2</title>
+
+<style>          
+	header {background-color: brown;}
+	body {background-color: #CCCC00;}
+	h1 { text-align: center }
+
+</style>
+
+</head>
+
+<header>
+  <h1> Joe's Hotdogs: New And Improved Online Ordering System! </h1>     
+</header>
+
+<body>
+	
+
+<form>
+
+	<table border="0" cellpadding="3">
+		
+		<tr>   
+			<tr>
+			  <th>Hotdogs </th>
+			  
+			  <th> 		  
+				  <label for="HD amount"> Amount </label>
+				  	  
+				  <select id="hotdogamount" name="amount">
+				    <option value="0"></option>
+				    <option value="1">1</option>
+				    <option value="2">2</option>
+				    <option value="3">3</option>
+				    <option value="4">4</option>
+				    <option value="5">5</option>
+				    <option value="10">10</option>
+				    <option value="15">15</option>
+				    <option value="20">20</option>
+
+				  </select>
+			  </th>
+			  
+			  <th> $3.25 </th>
+			</tr>
+					   
+		<tr>		
+			<tr>
+			  <th>French Fries </th>		  
+			  	<th> 
+			  
+				  <label for="F amount"> Amount </label>
+					  
+				  <select id="friesamount" name="amount">
+					<option value="0"></option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="10">10</option>
+					<option value="15">15</option>
+					<option value="20">20</option>
+				  </select>
+
+			  </th>
+			  
+			  <th> $2.00 </th>
+			</tr>
+		   
+		<tr>
+						
+			<tr>				
+				<tr>
+				  <th>Sodas </th>
+				  
+				  <th> 
+				  
+					  <label for="S amount"> Amount </label>
+						  
+					  <select id="sodasamount" name="amount">
+						<option value="0"></option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="10">10</option>
+						<option value="15">15</option>
+						<option value="20">20</option>
+					  </select>
+				  </th>				  
+				  <th> $1.50 </th>
+				</tr>
+			   
+			<tr>
+	
+</table>
+
+<br>
+<input type = "button" id = "submit" value = "Submit Order" />
+
+</form>
+
+<script language="javascript">
+
+document.getElementById("submit").onclick = function() {
+	
+	var numdogs = document.getElementById("hotdogamount");
+	numdogs = parseInt(numdogs.value);
+
+	
+	var numfries = document.getElementById("friesamount");
+	numfries = parseInt(numfries.value);
+
+	var numsodas = document.getElementById("sodasamount");
+	numsodas = parseInt(numsodas.value);
+	
+	total = (numdogs*3.25) + (numfries*2) + (numsodas*1.5)
+
+	if(total == 0 ) {
+		alert("ERROR: you can't order nothing!")
+	}
+	
+	else {
+		alert("You ordered " + numdogs + " hotdogs, " + numfries + " fries, and "
+		+ numsodas + " drinks. Your total cost is " + total + " dollars.");
+
+	}
+}
+
+
+</script>
+
+</body>
+</html>
+
+
+
